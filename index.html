@@ -1,442 +1,98 @@
-<!DOCTYPE html>
-<html
-  lang="zh"
-  dir="ltr"
-  
-><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html><html lang="zh-cn"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noarchive"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet"><title>Meiguo.eu</title><link rel="canonical" href="https://www.meiguo.eu/"><link rel="alternate" hreflang="en" href="https://www.united-states-of-america.eu/"><link rel="alternate" hreflang="fr" href="https://www.etats-unis.eu/"><link rel="alternate" hreflang="zh-cn" href="https://www.meiguo.eu/"><link rel="alternate" hreflang="zh-hant" href="https://www.meiguo.eu/zh-hant/"><link rel="alternate" hreflang="x-default" href="https://www.united-states-of-america.eu/"><meta property="og:site_name" content="Meiguo.eu"><meta property="og:title" content="Meiguo.eu"><meta property="og:type" content="website"><meta property="og:url" content="https://www.meiguo.eu/"><meta property="og:locale" content="zh-cn"><meta property="og:image" content="https://www.meiguo.eu/images/ECTHRwatch_square.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Meiguo.eu"><meta name="twitter:image" content="https://www.meiguo.eu/images/ECTHRwatch_square.jpg"><script>
+      (function () {
+        var pref = localStorage.getItem("theme") || "auto";
+        var resolved = pref === "auto"
+          ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+          : pref;
+        document.documentElement.setAttribute("data-theme", resolved);
+      })();
+    </script><style>.home-container[data-astro-cid-j7pv25f6]{max-width:56rem;margin:3rem auto;padding:2rem 1.5rem;background-color:var(--color-content-bg);border-radius:.25rem}.about-header[data-astro-cid-j7pv25f6]{display:flex;align-items:flex-start;gap:2rem;margin-bottom:2rem}.about-avatar[data-astro-cid-j7pv25f6]{flex-shrink:0;width:180px}.avatar-img[data-astro-cid-j7pv25f6]{width:100%;border-radius:50%;display:block}.about-info[data-astro-cid-j7pv25f6]{flex:1}.about-info[data-astro-cid-j7pv25f6] h1[data-astro-cid-j7pv25f6]{font-size:1.8rem;margin-bottom:.75rem;line-height:1.3}.about-divider[data-astro-cid-j7pv25f6]{width:25%;border-bottom:1px solid var(--color-nav-border);margin-bottom:1rem}.about-role[data-astro-cid-j7pv25f6]{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-bottom:1.5rem;font-size:.95rem}.about-bio[data-astro-cid-j7pv25f6]{font-size:1.05rem;line-height:1.7}.exec-summary[data-astro-cid-j7pv25f6]{margin-top:1rem}.portrait-section[data-astro-cid-j7pv25f6]{text-align:center;margin:1.5rem 0}.portrait-img[data-astro-cid-j7pv25f6]{width:128px;height:auto;border-radius:50%;display:inline-block}.contact-links[data-astro-cid-j7pv25f6]{text-align:center;margin-bottom:2rem;line-height:1.8}.banner-section[data-astro-cid-j7pv25f6]{width:100%}.banner-bg[data-astro-cid-j7pv25f6]{width:100%;height:120px;background-size:contain;background-repeat:repeat-x;background-position:center}@media(max-width:768px){.about-header[data-astro-cid-j7pv25f6]{flex-direction:column;align-items:center;text-align:center}.about-avatar[data-astro-cid-j7pv25f6]{width:140px}.about-role[data-astro-cid-j7pv25f6]{justify-content:center}.about-divider[data-astro-cid-j7pv25f6]{margin-left:auto;margin-right:auto}}
+</style>
+<link rel="stylesheet" href="/_astro/Base.DLj4Hm4U.css"></head> <body> <nav class="nav"> <div class="nav-inner">  <div class="nav-row-1"> <a href="/" class="nav-brand">Meiguo.eu</a> <button class="nav-hamburger" type="button" aria-expanded="false" aria-label="Menu"> <span class="hamburger-label">Menu &rarr;</span> <span class="hamburger-icon"> <span class="bar"></span> <span class="bar"></span> <span class="bar"></span> </span> </button> <div class="nav-controls"> <div class="theme-toggle" role="group" aria-label="Theme"> <button type="button" data-theme-set="light">浅色</button> <button type="button" data-theme-set="dark">深色</button> <button type="button" data-theme-set="auto">自动</button> </div> <script>
+(function () {
+  function getSystemTheme() {
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
 
+  function applyTheme(pref) {
+    var resolved = pref === "auto" ? getSystemTheme() : pref;
+    document.documentElement.setAttribute("data-theme", resolved);
 
-<title>Meiguo.eu</title>
+    document.querySelectorAll("[data-theme-set]").forEach(function (btn) {
+      btn.classList.toggle("active", btn.getAttribute("data-theme-set") === pref);
+    });
+  }
 
-<meta name="generator" content="Hugo Eureka 0.9.3" />
-<link rel="stylesheet" href="https://www.united-states-of-america.eu/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
-<script defer src="https://www.united-states-of-america.eu/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+  var stored = localStorage.getItem("theme") || "auto";
+  applyTheme(stored);
 
-
-
-
-
-
-
-
-
-
-
-
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload"
-  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
-  as="style" onload="this.onload=null;this.rel='stylesheet'">
-
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/solarized-light.min.css"
-   media="print"
-  onload="this.media='all';this.onload=null" crossorigin>
-<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
-   crossorigin></script>
-  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
-     crossorigin></script>
-<link rel="stylesheet" href="https://www.united-states-of-america.eu/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
-
-
-<script defer type="text/javascript" src="https://www.united-states-of-america.eu/js/fontawesome.min.fbf58334762fcb42c16e0593596bb7b04a0c32bf8e0cdd596701a58706a96ef120cb2abab225e9591ee227ffd9043e5a.js"></script>
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
-   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
-  onload="this.media='all';this.onload=null" crossorigin>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
-  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
-   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    renderMathInElement(document.body, {
-      delimiters: [
-        { left: "$$", right: "$$", display: true },
-        { left: "$", right: "$", display: false },
-        { left: "\\(", right: "\\)", display: false },
-        { left: "\\[", right: "\\]", display: true }
-      ],
+  document.querySelectorAll("[data-theme-set]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var pref = btn.getAttribute("data-theme-set");
+      localStorage.setItem("theme", pref);
+      applyTheme(pref);
     });
   });
-</script>
 
-
-<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
-  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
-
-
-<link rel="icon" type="image/png" sizes="32x32" href="https://www.united-states-of-america.eu/images/etats-unis_350h_huebbfad1edfa8e198fe68a27ac6a615ca_49058_32x32_fill_q75_box_center.jpg">
-<link rel="apple-touch-icon" sizes="180x180" href="https://www.united-states-of-america.eu/images/etats-unis_350h_huebbfad1edfa8e198fe68a27ac6a615ca_49058_180x180_fill_q75_box_center.jpg">
-
-<meta name="description"
-  content="ECtHRwatch.org">
-
-
-
-<meta property="og:title" content="Meiguo.eu" />
-<meta property="og:type" content="website" />
-
-
-<meta property="og:image" content="https://www.united-states-of-america.eu/images/etats-unis_350h.jpg">
-
-
-<meta property="og:url" content="https://www.meiguo.eu/" />
-
-
-
-
-
-<meta property="og:description" content="ECtHRwatch.org" />
-
-
-
-
-
-<meta property="og:locale" content="zh" />
-
-
-
-<meta property="og:locale:alternate" content="fr" />
-
-<meta property="og:locale:alternate" content="en" />
-
-
-
-
-<meta property="og:site_name" content="Meiguo.eu" />
-
-
-
-
-
-
-
-
-<meta property="article:section" content="" />
-
-
-<link rel="alternate" type="application/rss+xml" href="https://www.meiguo.eu/index.xml" title="Meiguo.eu" />
-
-
-  <body class="flex min-h-screen flex-col">
-    <header
-      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
-    >
-      <div class="mx-auto w-full max-w-screen-xl"><script>
-    let storageColorScheme = localStorage.getItem("lightDarkMode")
-    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
-        document.getElementsByTagName('html')[0].classList.add('dark')
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () {
+    if ((localStorage.getItem("theme") || "auto") === "auto") {
+      applyTheme("auto");
     }
-</script>
-<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
-    <a href="/" class="me-6 text-primary-text text-xl font-bold">Meiguo.eu</a>
-    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
-        <i class="fas fa-bars"></i>
-    </button>
-
-    <div id="target"
-        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
-        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
-            <a href="/#%e5%85%b3%e4%ba%8e%e6%88%91" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于我</a>
-            <a href="/%E5%85%AC%E5%BC%80%E4%BF%A1/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">公开信</a>
-            <a href="https://zh.ecthrwatch.org/%e6%97%b6%e9%97%b4%e8%bd%b4/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">时间轴</a>
-            <a href="https://zh.ecthrwatch.org/%e5%85%b6%e4%bb%96%e7%bd%91%e7%ab%99/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">其他网站</a>
-        </div>
-
-        <div class="flex">
-            <div class="relative pt-4 md:pt-0">
-                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
-                    <i class="fas fa-adjust"></i>
-                </div>
-                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
-                </div>
-                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
-                    id='lightDarkOptions'>
-                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
-                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
-                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
-                </div>
-            </div>
-            <div class="relative pt-4 ps-4 md:pt-0">
-                <div class="cursor-pointer hover:text-eureka" id="languageMode">
-                    <i class="fas fa-globe"></i>
-                    <span class="ps-1">Chinese - 简体中文</span>
-                </div>
-                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open-lang">
-                </div>
-                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
-                    id='languageOptions'>
-                    <a class="px-4 py-1 hover:text-eureka" href="https://www.meiguo.eu/">Chinese - 简体中文</a>
-                    <a class="px-4 py-1 hover:text-eureka" href="https://www.etats-unis.eu/">French - Français</a>
-                    <a class="px-4 py-1 hover:text-eureka" href="https://www.united-states-of-america.eu/">English</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
-    </div>
-
-</nav>
-<script>
-    
-    let element = document.getElementById('lightDarkMode')
-    if (storageColorScheme == null || storageColorScheme == 'Auto') {
-        document.addEventListener('DOMContentLoaded', () => {
-            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
-        })
-    } else if (storageColorScheme == "Light") {
-        element.firstElementChild.classList.remove('fa-adjust')
-        element.firstElementChild.setAttribute("data-icon", 'sun')
-        element.firstElementChild.classList.add('fa-sun')
-    } else if (storageColorScheme == "Dark") {
-        element.firstElementChild.classList.remove('fa-adjust')
-        element.firstElementChild.setAttribute("data-icon", 'moon')
-        element.firstElementChild.classList.add('fa-moon')
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        getcolorscheme();
-        switchBurger();
-        switchLanguage()
+  });
+})();
+</script> <div class="lang-switcher"> <button type="button" class="lang-switcher-btn" aria-expanded="false"> 简体中文 </button> <div class="lang-dropdown"> <a href="https://www.united-states-of-america.eu/"> English </a><a href="https://www.etats-unis.eu/"> Français </a><a href="https://www.meiguo.eu/" class="current"> 简体中文 </a><a href="/zh-hant/"> 繁體中文 </a> </div> </div> </div> </div> <ul class="nav-links"> <li><a href="/gongkaixin-yu-shishi-jingguo-shijianxian/">事实经过与公开信时间线</a></li><li><a href="/cia-mi6-ji-faguo-qingbao-jigou-canyu/">CIA、MI6与法国情报参与</a></li><li><a href="/xingxun-yu-sixing-fengxian-zai-zhongguo/">刑讯与死刑风险在中国</a></li><li><a href="/zhengzai-jinxing-de-falu-chengxu/">正在进行的司法程序</a></li><li><a href="/rengong-zhineng-fenxi-queren-maidanglao-fanzui/">人工智能分析</a></li> </ul> </div> </nav> <script>
+(function () {
+  // Hamburger toggle
+  var hamburger = document.querySelector(".nav-hamburger");
+  var navLinks = document.querySelector(".nav-links");
+  if (hamburger && navLinks) {
+    hamburger.addEventListener("click", function () {
+      var expanded = hamburger.getAttribute("aria-expanded") === "true";
+      hamburger.setAttribute("aria-expanded", String(!expanded));
+      navLinks.classList.toggle("open");
     });
-</script>
+  }
+
+  // Language switcher dropdown
+  var langBtn = document.querySelector(".lang-switcher-btn");
+  var langDropdown = document.querySelector(".lang-dropdown");
+  if (langBtn && langDropdown) {
+    langBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var expanded = langBtn.getAttribute("aria-expanded") === "true";
+      langBtn.setAttribute("aria-expanded", String(!expanded));
+      langDropdown.classList.toggle("open");
+    });
+
+    document.addEventListener("click", function () {
+      langBtn.setAttribute("aria-expanded", "false");
+      langDropdown.classList.remove("open");
+    });
+  }
+})();
+</script> <main>  <div class="home-container" data-astro-cid-j7pv25f6> <!-- About Section --> <div class="about-section" data-astro-cid-j7pv25f6> <div class="about-header" data-astro-cid-j7pv25f6> <div class="about-avatar" data-astro-cid-j7pv25f6> <img src="/images/ECTHRwatch_square.jpg" alt="Avatar" class="avatar-img" data-astro-cid-j7pv25f6> </div> <div class="about-info" data-astro-cid-j7pv25f6> <h1 data-astro-cid-j7pv25f6>Meiguo.eu</h1> <div class="about-divider" data-astro-cid-j7pv25f6></div> <div class="about-role" data-astro-cid-j7pv25f6> <span data-astro-cid-j7pv25f6></span> <a href="https://www.ECTHRwatch.org/" data-astro-cid-j7pv25f6>ECTHRwatch.org</a> </div>  </div> </div> <!-- Executive Summary -->  <div class="exec-summary prose" data-astro-cid-j7pv25f6><div style="text-align: center; font-size: 1.6em; font-weight: bold; margin-top: 1.5em; margin-bottom: 1em;">
+执行摘要<br>
+<span style="font-size: 0.85em; font-weight: normal;">（阅读时间少于 2 分钟）</span>
 </div>
-    </header>
-    <main class="grow pt-16">
-  
-  
-  
-    
-      
-  
-
-  
-
-  
-  
-  
-
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-  
-
-  
-  
-
-  
-    
-    
-    
-    
-      
-      
-    
-
-    
-    
-    
-    
-    
-  
-
-
-  <div
-    class="pl-scrollbar bg-secondary-bg"
-    
-  >
-    <div class="mx-auto max-w-screen-xl">
-      <div
-        id="about"
-        class="lg:w-3/4 mx-auto px-6 md:px-8 xl:px-12 py-12"
-      >
-        
-  
-
-  
-    
-      
-      <div class="mb-12 flex flex-col items-center justify-center md:flex-row">
-  
-  
-    <div class="md:ms-0 md:me-8 md:pe-8 md:border-e mx-auto w-48 flex-none">
-      <img src="https://www.united-states-of-america.eu/images/etats-unis_350h.jpg" class="rounded-full" alt="Avatar" />
-    </div>
-  
-  <div class="mt-4 w-full grow md:mt-0">
-    <h1 class="py-4 text-3xl">Meiguo.eu (美国 🇺🇸)</h1>
-    <div class="w-3/12 border-b xl:w-2/12"></div>
-
-    <div class="flex items-center pt-4">
-      
-      <div class="flex flex-wrap">
-        
-
-        
-          <a href="https://www.meiguo.eu/" class="ps-4">Meiguo.eu</a>
-        
-      </div>
-    </div>
-
-    
-  </div>
-  <div class="md:ms-8 flex items-end justify-center md:flex-col">
-    
-    
-      
-      
-      
-      
-      
-      <div class="mx-2 mb-2 mt-4 md:mx-0 md:mt-2">
-        <a href="mailto:ecthrwatch@gmail.com"><i class="fas fa-envelope"></i></a>
-      </div>
-    
-      
-      
-      
-      
-      
-      <div class="mx-2 mb-2 mt-4 md:mx-0 md:mt-2">
-        <a href="https://twitter.com/ECtHRwatch"><i class="fab fa-twitter"></i></a>
-      </div>
-    
-      
-      
-      
-      
-      
-      <div class="mx-2 mb-2 mt-4 md:mx-0 md:mt-2">
-        <a href="https://github.com/ecthrwatch"><i class="fab fa-github"></i></a>
-      </div>
-    
-  </div>
-</div>
-<div class="prose">
-  <h2 id="introduction">Introduction</h2>
-<p>More information coming soon.</p>
-<p>More links can be found in the <a href="https://www.ecthrwatch.org/links/">links section of ECtHRwatch.org</a>.</p>
-
-</div>
-
-      
-    
-  
-
-      </div>
-    </div>
-  </div>
-
-    
-
-    
-  
-    
-      
-  
-
-  
-
-  
-  
-  
-
-  
-    
-    
-    
-    
-    
-    
-      
-      
-        
-      
-    
-
-    
-    
-    
-    
-
-    
-    
-    
-    
-
-  
-
-  
-  
-
-  
-    
-    
-    
-    
-      
-      
-    
-
-    
-    
-    
-    
-    
-  
-
-
-  <div
-    class="pl-scrollbar bg-contain"
-    style="background-image: url(https://www.meiguo.eu/images/logo_nussberger_1.jpg);"
-  >
-    <div class="mx-auto max-w-screen-xl">
-      <div
-        id="blank"
-        class="lg:w-3/4 mx-auto px-6 md:px-8 xl:px-12 py-12"
-      >
-        
-  
-
-  
-    
-      
-      
-<!-- <div style="text-align:center">
-  <p></p>
-</div> -->
-      
-    
-  
-
-      </div>
-    </div>
-  </div>
-
-    
-
-    
-  
-    </main>
-    <footer class="pl-scrollbar">
-      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
-    <p class="text-sm text-tertiary-text">&copy; 2021 <a href="https://zh.x-v-france.com/">X. (more information on X-v-France.com)</a><br> <a href="https://www.Meiguo.eu">Meiguo.eu</a>
-</p>
-</div></div>
-    </footer>
-  </body>
-</html>
+<div style="font-size: 1.1em; line-height: 1.5;"><p>&#x1F1E8;&#x1F1F3; <strong>简体中文版本</strong><br><strong>说明</strong>：请注意，<strong>中文</strong>并不是我的母语，因此我使用了翻译软件来完成本版本。如需更准确、原始的表达，请参考英文或法文版本。</p>
+<p><strong>罪行概述</strong><br>麦当劳在全球范围内举办促销活动，虚假宣传为&quot;公平的抽奖游戏&quot;。但事实上，该公司多次歪曲中奖概率，甚至直接伪造中奖数据。这不仅是误导性的市场营销，更是一种精心策划的严重欺诈行为。</p>
+<p>这些类似黑手党的手段构成了大规模的消费者欺诈和跨国洗钱行为。此外，它们也属于《联合国打击跨国有组织犯罪公约》（巴勒莫公约）的适用范围，尤其是<strong>第5条</strong>，该条明确规定要追究参与有组织犯罪集团和跨境实施严重犯罪的责任。</p>
+<p><strong>犯罪的规模</strong><br>三十多年来，麦当劳在数十个国家欺骗了数十亿消费者。其经济影响包括：剥夺了消费者在抽奖未被操纵的前提下赢得奖品的机会、操纵市场，以及获取不正当的竞争优势。整体涉案金额可能超过<strong>一万亿美元</strong>。数以万计的加盟商虽然在法律上是独立实体，却在执行这些欺诈操作中发挥了关键作用。尽管许多人可能会声称对此一无所知，但他们的行为往往体现出刑事层面的重大过失。如果法律得以严格执行，麦当劳及其加盟商应被宣布破产，并依法追究刑责。</p>
+<p><strong>法国的沉默与美国情报机构的介入</strong><br>在法国，司法文件被多次伪造。麦当劳似乎获得了来自内部的保护，这种保护涉及高级官员、检察官和法官，以及未能履行宪法监督职责的议员。这种保护甚至可能延伸至部长、总理，乃至——如果属实，将构成<strong>一场严重的宪政危机</strong>——现任总统埃马纽埃尔·马克龙。</p>
+<p>我目前居住在中国。曾有一些我此前就认识的人与我接触，他们曾提出雇佣我，却未透露真实身份。直到他们承认麦当劳犯罪的严重性后，才表明自己是<strong>美国情报人员</strong>。在身份曝光后，他们再次提出让我为他们工作的邀请。</p>
+<p><strong>和平共处，上主鉴察</strong><br>我深爱中国与美国，但我更深爱我的妻子与岳父母。我的岳父是中国共产党退休干部。如果我接受美国军事情报部门的雇佣，将把我的家庭置于严重危险之中。我如今长期面临来自中国、法国乃至美国当局的报复威胁。
+我所能选择的唯一道路，必须出于<em><strong>良知</strong></em>，遵循我的<em>信仰</em>，听命于上帝而非各国政府，忠于真理与正义，并始终秉持&quot;和平共处&quot;的理想——这是我在上帝面前的道德责任。</p>
+<div style="text-align: center; font-style: italic;">
+"惟愿公平如大水滚滚，使公义如江河滔滔。"<br>
+阿摩司书 5:24
+</div><p>即使法庭沉默，制度崩塌，权贵滥用权力，神圣的正义也从不沉睡。<br>它继续奔流。坚定不移。洁净人心。势不可挡。</p>
+<p>一句广为流传的中国谚语表达了这种不可逆转的力量：</p>
+<div style="text-align: center;">
+<span style="font-weight: bold;">&laquo; 长江黄河不会倒流 &raquo;</span><br>
+<span style="font-style: italic;">"The Yangtze River and the Yellow River will never flow backward."</span>
+</div><p>它提醒我们，有些力量是无法逆转的，正如创造主的旨意坚定不移、势不可挡。<br>神圣的正义从不迟疑。它穿透黑暗，洁净腐败，并且<strong>始终</strong>得胜。</p>
+<p>正如长江与黄河始终奔流到终点，<br>我也将坚定地走这条窄路，奔向唯一真正的胜利：<br>那胜利恢复正义，带来和平，并成就天意。</p>
+</div><div style="text-align: center; font-size: 1.25em; line-height: 1.6; letter-spacing: 0.04em;">
+陆圣乔<br>
+中国北京
+</div></div> <!-- Portrait + contact --> <div class="portrait-section" data-astro-cid-j7pv25f6> <a href="https://www.linkedin.com/in/x-v-france/" data-astro-cid-j7pv25f6> <img src="/images/vlc_portrait.jpeg" alt="Vincent" class="portrait-img" data-astro-cid-j7pv25f6> </a> </div> <p class="contact-links" data-astro-cid-j7pv25f6> <a href="https://www.linkedin.com/in/x-v-france" data-astro-cid-j7pv25f6>点击这里在 LinkedIn 上关注我</a><br data-astro-cid-j7pv25f6> 您也可以通过以下地址给我发送电子邮件： <a href="mailto:vincent@ecthrwatch.org" data-astro-cid-j7pv25f6>vincent@ecthrwatch.org</a> </p> </div> </div>  <div class="banner-section" data-astro-cid-j7pv25f6> <div class="banner-bg" style="background-image: url(/images/logos/ecthrwatch_banner_mcdonalds_227w_112h.jpg);" data-astro-cid-j7pv25f6></div> </div>  </main> <footer class="footer"> <div class="footer-links">  <a href="/">首页</a> <span class="footer-sep"> | </span> <a href="/qitawangzhan/">其他网站</a> <span class="footer-sep"> | </span> <a href="/xiangguan-falv-fagui/">相关法律法规</a> <span class="footer-sep"> | </span> <a href="/shishi-jingguo-yu-gongkaixin-shijianxian/zhendui-maidanglao-rico-xingshi-anjian-fanzui-jubao/">犯罪举报书（草稿）</a> <span class="footer-sep"> | </span> <a href="/zhengju-liebiao/">证据列表</a> <span class="footer-sep"> | </span> <a href="/xiangxi-shishi-jingguo-yu-gongkaixin-shijianxian/">详细时间线</a> <span class="footer-sep"> | </span> <a href="/jiuzheng/">纠正</a>  </div> <div class="footer-org">European Court of Human Rights Watch</div> <div>&copy; 2021-2026 <a href="https://www.lushengqiao.com/">陆圣乔</a></div> </footer> </body></html>
